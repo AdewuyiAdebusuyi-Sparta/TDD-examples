@@ -14,7 +14,6 @@ def test_ip_is_palindrome_blank():
 def is_palindrome(text):
     if type(text) != str:
         return False
-    palindrome_true = True
     text = str(text)
     text = text.lower()
     text_temp = ""
@@ -22,9 +21,4 @@ def is_palindrome(text):
         if char in ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]:
             text_temp = text_temp + char
     text = text_temp
-    text1st, text2nd = text[:math.ceil(len(text)/2)], text[math.floor(len(text)/2):]
-    text_len = len(text1st)-1
-    for i in range(text_len):
-        if text1st[i] != text2nd[text_len-i]:
-            palindrome_true = False
-    return palindrome_true
+    return text == text[::-1]

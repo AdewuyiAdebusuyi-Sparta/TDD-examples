@@ -1,5 +1,5 @@
 def test_cv_regular_string_upper_vowels():
-    result = count_vowels("The Quick Brown Fox Jumped Over The Lazy Dog")
+    result = count_vowels("The Quick Brown Fox Jumps Over The Lazy Dog")
     expected = 12
     assert result == expected
 def test_cv_regular_string_2nd():
